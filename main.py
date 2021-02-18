@@ -67,7 +67,7 @@ def update_graph(option_selected):
     fig = px.choropleth(
         data_frame=dff,
         locationmode='USA-states',
-        locations='state-code',
+        locations='state_code',
         scope='usa',
         color='Pct of Colonies Impacted',
         hover_data=['State', 'Pct of Colonies Impacted'],
