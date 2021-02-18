@@ -80,7 +80,7 @@ def update_graph(option_selected):
     fig = go.Figure(
         data=[go.Choropleth(
             locationmode='USA-states',
-            locations=diff['state_code'],
+            locations=dff['state_code'],
             z=dff['Pct of Colonies Impacted'].astype(float),
             colorscale='Reds',
         )]
