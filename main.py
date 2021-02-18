@@ -15,7 +15,7 @@ df = pd.read_csv("intro_bees.csv")
 
 df = df.groupby(['State', 'ANSI', 'Affected by', 'Year', 'state_code'])[
     ['Pct of Colonies Impacted']].mean()
-df.reset_index()
+df.reset_index(inplace=True)
 print(df.head())
 
 # ------------------------------------------------------------------------------------------------------------
