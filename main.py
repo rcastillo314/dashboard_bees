@@ -73,26 +73,25 @@ def update_graph(option_selected):
         hover_data=['State', 'Pct of Colonies Impacted'],
         color_continuous_scale=px.colors.sequential.YlOrRd,
         labels={'Pct of Colonies Impacted': '% of Bee Colonies'},
-        template='plotly_dark'
     )
 
     # Plotly Graph Objects (go)
-    fig = go.Figure(
-        data=[go.Choropleth(
-            locationmode='USA-states',
-            locations=dff['state_code'],
-            z=dff['Pct of Colonies Impacted'].astype(float),
-            colorscale='Reds',
-        )]
-    )
+    # fig = go.Figure(
+    #     data=[go.Choropleth(
+    #         locationmode='USA-states',
+    #         locations=dff['state_code'],
+    #         z=dff['Pct of Colonies Impacted'].astype(float),
+    #         colorscale='Reds',
+    #     )]
+    # )
 
-    fig.update_layout(
-        title_text="Bees Affectd by Mites in the USA",
-        title_xanchor="center",
-        title_font=dict(size=24),
-        title_x=0.5,
-        geo=dict(scope='usa'),
-    )
+    # fig.update_layout(
+    #     title_text="Bees Affectd by Mites in the USA",
+    #     title_xanchor="center",
+    #     title_font=dict(size=24),
+    #     title_x=0.5,
+    #     geo=dict(scope='usa'),
+    # )
 
     return container, fig
 
